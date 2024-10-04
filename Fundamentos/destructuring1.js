@@ -3,7 +3,7 @@ const pessoa ={
     idade: 5,
     endereco:{
         logradouro: 'Rua ABC',
-        numero: 1001
+        numero: 1000
     }  
 }
 const { nome, idade } = pessoa
@@ -18,5 +18,5 @@ console.log(sobrenome, menor)
 const { endereco:{logradouro, numero, cep}} = pessoa
 console.log(logradouro, numero, cep)
 
-const{ conta:{ag, num}} = pessoa
-console.log(ag, num)
+//const{ conta:{ag, num}} = pessoa
+//console.log(ag, num)
