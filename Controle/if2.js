@@ -1,11 +1,10 @@
 function testes1 (num){
     if(num > 7)
         console.log(num)
-        //separado do if
         console.log('Final')
 }
-//testes1(6)
-//testes1(8)
+testes1(6)
+testes1(8)
 
 function teste2(num){
     if(num>7);

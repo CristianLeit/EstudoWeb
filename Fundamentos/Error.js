@@ -13,7 +13,7 @@ function tratarErroELançar(erro){
 }
 function imprimirNomeGrifado(obj){
     try{
-        console.log(obj.name.toUpperCXse()+'!!!')
+        console.log(obj.name.toUpperCase()+'!!!')
 
     }catch (e){
         tratarErroELançar(e)
