@@ -23,6 +23,8 @@ function run(fun){
 
 run(function (){console.log('Executando...')})
 
+
+//uma função pode retornar/conter uma função
 function soma(a,b){
     return function (c){
         console.log(a + b + c)
@@ -30,3 +32,5 @@ function soma(a,b){
 }
 
 soma(2,3)(4)
+const cincoMais = soma(2,3)
+cincoMais(4)

@@ -16,10 +16,9 @@ function soma2(a,b,c){
     return a + b + c
 
 }
-
-//valor padrão do es2015
 console.log(soma2(), soma2(3), soma2(1, 2, 3), soma2(0,0,0))
 
+//valor padrão do es2015☻
 function soma3( a = 1, b = 1, c = 1){
     return a + b + c
 }
