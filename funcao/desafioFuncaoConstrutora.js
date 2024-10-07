@@ -18,3 +18,14 @@ function getPessoa(nome){
 }
 const p2 = new getPessoa('João')
 p2.falar()
+
+
+function Pessoa24(/*nomi*/){
+    //this.nomi
+    this.falar = function(nomi){
+       console.log('Func Const24: Meu nome é',nomi);     
+   }
+}
+const p3 = new Pessoa24('ju')
+p3.falar('ju')
+console.log(p3.nomi);// undefined porque o nomi não esta referenciado

@@ -1,6 +1,6 @@
 console.log(soma(3, 4))
-//console.log(sub(3, 4)) erro
-//console.log(mult(3, 4)) erro
+//console.log(sub(3, 4)) erro ao chamar antes a function expression
+//console.log(mult(3, 4)) "             " named function expression
 
 //fuction declaration
 function soma(x, y){

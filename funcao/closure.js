@@ -3,7 +3,7 @@
 
 //Contexto léxico em ação
 
-const x = 'Globa'
+const x = 'Global'
 
 function fora(){
     const x = 'local'
