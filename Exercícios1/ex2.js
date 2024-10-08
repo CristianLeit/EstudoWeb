@@ -10,8 +10,8 @@ function triagulos(a, b, c) {
     }
 }
 
-triagulos(1, 1, 1)
-triagulos(2, 1, 1)
-triagulos(1, 1, 3)
-triagulos(1, 3, 1)
-triagulos(3, 1, 2)
+triagulos(1, 1, 1)//Equilátero
+triagulos(2, 1, 1)//Isósceles
+triagulos(1, 1, 3)//Isósceles
+triagulos(1, 3, 1)//Isósceles
+triagulos(3, 1, 2)//Escaleno

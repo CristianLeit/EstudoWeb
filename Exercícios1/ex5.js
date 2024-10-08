@@ -18,3 +18,9 @@ function retornaReal(n) {
 retornaReal(num)
 retornaReal(0.1 + 0.2)
 retornaReal(1111111.3453463)
+
+//usando replace
+const ConvertReal = (moeda) => console.log("replace: R$",
+     moeda.toFixed(2).replace('.',','));
+
+ConvertReal(num)
