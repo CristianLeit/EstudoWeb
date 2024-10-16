@@ -12,3 +12,6 @@ function anoBi(n){
 }
 
 console.log(anoBi(800));
+console.log(anoBi(80));
+console.log(anoBi(4860));
+console.log(anoBi(500));
