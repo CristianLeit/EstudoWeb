@@ -6,4 +6,4 @@ function fatoria (num){
     }
     return console.log(num);
 }
-fatoria(100)
+fatoria(10)

@@ -24,3 +24,17 @@ const ConvertReal = (moeda) => console.log("replace: R$",
      moeda.toFixed(2).replace('.',','));
 
 ConvertReal(num)
+
+function fatorial(n){
+    let apl = n
+    let zero
+    for (let i = 0; i < n; n--) {
+       if(n != 0) {apl = apl*(n-1);
+        zero++
+        console.log(apl)
+        console.log(n);
+       }
+    }
+    return console.log(n);  
+}
+fatorial(10)
