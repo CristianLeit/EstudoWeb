@@ -11,10 +11,11 @@ function diaUtil(key) {
         case 7:
             return "Final de semana"
         default:
-            return "Dia inválida!"
+            return "Dia inválido!"
     }
 }
 console.log(diaUtil(5));
 console.log(diaUtil());
 console.log(diaUtil(7));
 console.log(diaUtil(1));
+console.log(diaUtil(10));

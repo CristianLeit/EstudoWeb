@@ -32,3 +32,5 @@ console.log();
 cedulas(578)
 console.log();
 cedulas(339)
+
+//fazer com o switch

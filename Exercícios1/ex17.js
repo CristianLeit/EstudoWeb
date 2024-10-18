@@ -5,7 +5,7 @@ function aumento(plano, salario) {
         case 'B':
             return salario * 1.15
         case 'C':
-            return salario * 1.3
+            return salario * 1.2
         default:
             return 'Plano inválido!';
     }
