@@ -1,9 +1,11 @@
 function loop(indice, nota){
     let ced=indice / nota
-    return console.log((ced).toFixed() ,'nota(s) de R$', nota.toFixed(2));
+    return console.log(Math.floor(ced) ,'nota(s) de R$', nota.toFixed(2));
 }
 function cedulas(num) {
-    dinheiro = num
+/*// com switch é um trabalho dobrado com várias funções
+while (num>0) {
+
     switch (num) {
         case 100:
             loop(num, 100)
@@ -25,8 +27,10 @@ function cedulas(num) {
             dinheiro%=1
         default:
     }
+}*/
+    dinheiro = num
     console.log('cedulas de',num);
-    /*for (let index = 0; index <= dinheiro; index++) {
+    for (let index = 0; index < dinheiro; index++) {
         if (dinheiro>=100) {
             loop(dinheiro, 100)
             dinheiro%=100
@@ -43,7 +47,7 @@ function cedulas(num) {
             loop(dinheiro, 1)
             dinheiro%=1
         }
-    }*/
+    }
     
 }
 cedulas(100)
@@ -53,6 +57,3 @@ console.log();
 cedulas(578)
 console.log();
 cedulas(339)
-
-//fazer com o switch
-

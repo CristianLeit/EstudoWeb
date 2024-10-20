@@ -36,3 +36,4 @@ function verificacaoDeString(string1, string2) {
 }
 
 console.log(verificacaoDeString('abcdf', 'dcba'))
+console.log(verificacaoDeString('abcdf', 'bcadf'))
