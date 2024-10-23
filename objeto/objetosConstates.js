@@ -1,5 +1,5 @@
 //pessoa(constante) -> 123(endereço de memória) -> {...}(objeto)
-const pessoa ={nome: 'João'}
+const pessoa = { nome: 'João' }
 pessoa.nome = 'Pedro'
 console.log(pessoa)
 
@@ -17,6 +17,6 @@ delete pessoa.nome
 console.log(pessoa.nome);
 console.log(pessoa);
 
-const pessoaConstante = Object.freeze({nome: 'João'})
+const pessoaConstante = Object.freeze({ nome: 'João' })
 pessoaConstante.nome = 'Cacete'
 console.log(pessoaConstante);
