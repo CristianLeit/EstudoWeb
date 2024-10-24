@@ -1,46 +1,46 @@
 //Cadeia de prototipos (prototype chain)
 Object.prototype.attr0 = '0' //não faça isso idiota!!!
 
-const avo = { attr1: 'A'}
-const pai = { __proto__: avo, attr2: 'B', attr3: '3'}
-const filho = { __proto__: pai, attr3: 'C'}
+const avo = { attr1: 'A' }
+const pai = { __proto__: avo, attr2: 'B', attr3: '3' }
+const filho = { __proto__: pai, attr3: 'C' }
 console.log(filho.attr0, filho.attr1, filho.attr2, filho.attr3);
 
 const carro = {
     velAtual: 0,
     velMax: 200,
-    acelerarMais(delta){
-        if(this.velAtual + delta <= this.velMax){
+    acelerarMais(delta) {
+        if (this.velAtual + delta <= this.velMax) {
             this.velAtual += delta
         } else {
             this.velAtual = this.velMax
         }
     },
-    status(){
-        return`${this.velAtual}Km/h de ${this.velMax}Km/h`
+    status() {
+        return `${this.velAtual}Km/h de ${this.velMax}Km/h`
     }
 }
 
 const ferrari = {
     modelo: 'F40',
-    velMax:324 // shadowing
+    velMax: 324 // shadowing
 }
 
 const volvo = {
     modelo: "V40",
-    status(){
+    status() {
         return `${this.modelo}: ${super.status()}`// o this é de forma recursiva enquanto que o super pode pegar o método do prototipo (ou seja o pai) 
     }
- }
-    
- Object.setPrototypeOf(ferrari,carro)// estabelece uma relação entre os dois, ou seja ferrari tem carro como prototipo
- Object.setPrototypeOf(volvo, carro)
+}
 
- console.log(ferrari)//toString vai ler os atributos e funções que pertence ao objeto
- console.log(volvo)
+Object.setPrototypeOf(ferrari, carro)// estabelece uma relação entre os dois, ou seja ferrari tem carro como prototipo
+Object.setPrototypeOf(volvo, carro)
 
- volvo.acelerarMais(100)
- console.log(volvo.status());
+console.log(ferrari)//toString vai ler os atributos e funções que pertence ao objeto
+console.log(volvo)
 
- ferrari.acelerarMais(300)
- console.log(ferrari.status());
+volvo.acelerarMais(100)
+console.log(volvo.status());
+
+ferrari.acelerarMais(300)
+console.log(ferrari.status());
