@@ -9,7 +9,7 @@ delete produto.tag
 console.log(produto)
 
 //Object.seal nada de novos atributos ou excluir mas pode modificalos
-const pessoa = { 
+const pessoa = {
     nome: 'Juliana', idade: 35
 }
 Object.seal(pessoa)
