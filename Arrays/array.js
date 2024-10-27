@@ -16,8 +16,9 @@ console.log(aprovados.length);
 aprovados[9] = 'Rafael'
 console.log(aprovados.length);
 console.log(aprovados[8] === undefined);
-console.log(aprovados)
 
+//sort = reorganizar
+console.log(aprovados)
 aprovados.sort()
 console.log(aprovados);
 
