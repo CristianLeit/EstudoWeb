@@ -5,6 +5,8 @@ const carrinho =[
     '{"nome":"Caneta", "preco":7.50}'
 ]
 //retorna um array apenas com os preços
-const soPreco = carrinho.map((a) => {carParse = JSON.parse(a) 
-    return carParse.preco})
-console.log(soPreco);
+const paraObj = json => JSON.parse(json)
+const apenasPreco = produto => produto.preco
+
+const resultado = carrinho.map(paraObj).map(apenasPreco)
+console.log(resultado);
