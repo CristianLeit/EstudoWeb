@@ -1,7 +1,7 @@
-Array.prototype.filter2 = function(callback){
+Array.prototype.filter2 = function (callback) {
     const newArray = []
     for (let i = 0; i < this.length; i++) {
-        if (callback(this[i],i,this)) {
+        if (callback(this[i], i, this)) {
             newArray.push(this[i])
         }
     }
@@ -14,5 +14,5 @@ const produtos = [
     { nome: 'Copo de Plástico', preco: 18.99, fragil: false }
 ]
 
-const caroFragil = produtos.filter2((p)=>p.preco>500&&p.fragil)
+const caroFragil = produtos.filter2((p) => p.preco > 500 && p.fragil)
 console.log(caroFragil);
