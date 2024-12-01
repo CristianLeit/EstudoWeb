@@ -1,7 +1,7 @@
 const anonimo = process.argv.indexOf('-a') !== -1
 //console.log(anonimo)
 
-if(anonimo){
+if (anonimo) {
     process.stdout.write('Fala Anônima!\n')//saida anonima
     process.exit()
 } else {
