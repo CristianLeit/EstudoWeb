@@ -9,7 +9,7 @@ function salvarProduto(produto) {
     if (!produto.id) produto.id = sequence.id
     produtos[produto.id] = produto
     return produto
-} 
+}
 
 function getProduto(id) {
     return produtos[id] || {}
