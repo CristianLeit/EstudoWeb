@@ -12,6 +12,6 @@ console.log(times.has('Vasco'));
 times.delete('Flamengo')
 console.log(times.has('Flamengo'));
 
-const nomes = ['Raquel','Lucas', 'Julia','Lucas']
+const nomes = ['Raquel', 'Lucas', 'Julia', 'Lucas']
 const nomesSet = new Set(nomes)
 console.log(nomesSet);
