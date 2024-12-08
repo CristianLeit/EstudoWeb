@@ -15,3 +15,23 @@ lerArquivo(caminho)
     .then(linha=> linha.join(', '))
     .then(conteudo => `O valor final é ${conteudo}`)
     .then(console.log)
+
+    /*    
+
+const fs = require('fs')
+const path = require('path')
+
+const caminho = path.join(__dirname,'dados.txt')
+
+function exibirConteudo(_, conteudo){
+    console.log(conteudo.toString());  
+}
+function chamada(caminho){
+    return new Promise((resolve) =>{
+        exibir = fs.readFile(caminho,exibirConteudo)
+        resolve(exibir)
+    })
+
+}
+
+chamada(caminho) */
