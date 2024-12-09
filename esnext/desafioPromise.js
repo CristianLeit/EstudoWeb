@@ -34,4 +34,7 @@ function chamada(caminho){
 
 }
 
-chamada(caminho) */
+chamada(caminho).then(linha=> linha.join(', '))
+    .then(conteudo => `O valor final é ${conteudo}`)
+    .then(console.log)
+ */

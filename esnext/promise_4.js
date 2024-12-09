@@ -1,18 +1,18 @@
 const { timeEnd } = require("console")
 
-function gerarNumerosEntre(min,max,tempo){
-    if(min> max)[max, min] = [min, max]
+function gerarNumerosEntre(min, max, tempo) {
+    if (min > max) [max, min] = [min, max]
 
     return new Promise(resolve => {
-        setTimeout(function(){
+        setTimeout(function () {
             const fator = max - min + 1
-            const aleatorio = parseInt(Math.random() * (fator))+ min
+            const aleatorio = parseInt(Math.random() * (fator)) + min
             resolve(aleatorio)
-        },tempo)
+        }, tempo)
     })
 }
 
-function gerarVariosNumeros(){
+function gerarVariosNumeros() {
     return Promise.all([
         gerarNumerosEntre(1, 60, 4000),
         gerarNumerosEntre(1, 60, 1000),
@@ -25,6 +25,6 @@ function gerarVariosNumeros(){
 console.time('promise');
 gerarVariosNumeros()
     .then(numeros = console.log)
-    .then(()=>{
+    .then(() => {
         console.timeEnd('promise')
     })
