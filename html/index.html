@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,76 +9,77 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-* {
-    margin: 0 auto;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
 
-#menu-h{
-    background-color: rgb(37, 37, 39);
-}
+        #menu-h {
+            background-color: rgb(37, 37, 39);
+        }
 
-#menu-h ul {
-    max-width: 800px;
-    list-style: none;
-    padding: 0;
-}
+        #menu-h ul {
+            max-width: 800px;
+            list-style: none;
+            padding: 0;
+        }
 
-#menu-h ul li {
-    display: inline;
-}
+        #menu-h ul li {
+            display: inline;
+        }
 
-#menu-h ul li a {
-    color: #FFF;
-    padding: 20px;
-    display: inline-block;
-    text-decoration: none;
-    transition: background .4s;
-}
+        #menu-h ul li a {
+            color: #FFF;
+            padding: 20px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background .4s;
+        }
 
-#menu-h ul li a:hover {
-    background-color: rgb(24, 139, 233);
-}
+        #menu-h ul li a:hover {
+            background-color: rgb(24, 139, 233);
+        }
 
-#menu-h ul li:last-child a {
-    float: right;
-    background-color: rgb(24, 139, 233);
-}
+        #menu-h ul li:last-child a {
+            float: right;
+            background-color: rgb(24, 139, 233);
+        }
 
-        #conteudo{
+        #conteudo {
             padding: 30px 0px;
         }
-        button{
+
+        button {
             background-color: aqua;
             margin: auto;
             font-size: 15px;
             size: auto;
-            width:150px;
+            width: 150px;
             height: 50px;
         }
-
     </style>
 </head>
+
 <body>
     <header>
-       <h1>Exercícios HTML</h1>
+        <h1>Exercícios HTML</h1>
 
     </header>
     <nav id="menu-h">
-        
+
         <button><a href wm-nav="exercicios/teste.html">00 - Teste</a></button>
-        <button><a href wm-nav="exercicios/texto1.html">01 - Texto 1</a></button> 
-        <button><a href wm-nav="exercicios/texto2.html">02 - Texto 2</a></button> 
-        <button><a href wm-nav="exercicios/listas.html">03 - Listas</a></button> 
-        <button><a href wm-nav="exercicios/listaAninhada.html">04 - Lista Aninhada</a></button> 
-        <button><a href wm-nav="exercicios/links.html">05 - Links</a></button> 
-        <button><a href wm-nav="exercicios/tabela.html">06 - Tabela</a></button> 
-        <button><a href wm-nav="exercicios/form/form.html">07 - Formulário</a></button> 
-        <button><a href wm-nav="exercicios/imagens.html">08 - Imagens</a></button> 
-        <button><a href wm-nav="exercicios/video.html">09 - Vídeo</a></button> 
-        <button><a href wm-nav="exercicios/tagsNaoVisuais.html">09 - Tags Não Visuais</a></button> 
+        <button><a href wm-nav="exercicios/texto1.html">01 - Texto 1</a></button>
+        <button><a href wm-nav="exercicios/texto2.html">02 - Texto 2</a></button>
+        <button><a href wm-nav="exercicios/listas.html">03 - Listas</a></button>
+        <button><a href wm-nav="exercicios/listaAninhada.html">04 - Lista Aninhada</a></button>
+        <button><a href wm-nav="exercicios/links.html">05 - Links</a></button>
+        <button><a href wm-nav="exercicios/tabela.html">06 - Tabela</a></button>
+        <button><a href wm-nav="exercicios/form/form.html">07 - Formulário</a></button>
+        <button><a href wm-nav="exercicios/imagens.html">08 - Imagens</a></button>
+        <button><a href wm-nav="exercicios/video.html">09 - Vídeo</a></button>
+        <button><a href wm-nav="exercicios/tagsNaoVisuais.html">09 - Tags Não Visuais</a></button>
     </nav>
     <section id="conteudo"></section>
     <footer><br>
@@ -86,9 +88,9 @@
     <script>
         document.querySelectorAll('[wm-nav]').forEach(link => {
             const conteudo = document.getElementById('conteudo')
-            link.onclick = function(e){
+            link.onclick = function (e) {
                 e.preventDefault()
-                
+
                 fetch(link.getAttribute('wm-nav'))
                     .then(resp => resp.text())
                     .then(html => conteudo.innerHTML = html)
@@ -96,4 +98,5 @@
         })
     </script>
 </body>
+
 </html>
