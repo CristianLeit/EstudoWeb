@@ -3,10 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CSS Selectors</title>
+    <tistle>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*
+        *{all}
+        .tag{class}
+        #aprovados{id}
+        #aninhado > div{o filho direto}
+        #aninhado > section{nada}
+        #aninhado > section{qualquer descendente}
+        p + ul {seleciona os nós que seguem imediatamente
+         o elemento especificado anteriormente}
+        p + ol {nada}
+        p ~ ol{qualquer um dos irmãos}
+        p ~ ul, ol {os irmão ul e ol presente}
+        [feira]{todas as propriedades com essa identificação}
+        [feira~=escritorio]{com o tio são possiveis elementos}
+        [feira*=sa]{se tiver sa}
+        span:nth-child(1){o primeiro filho de alguém do tipo span}
+        section > :nth-child(odd){todos os filhos impares(even=seria par)dessa section}
+        section > span:nth-of-type(2){o segundo epemento qde uma section que representa uma span}
+        */
+        [feira~=escritorio]{
+            color: #ff0;
+            background-color: #f77;
+        }
     </style>
 </head>
 
