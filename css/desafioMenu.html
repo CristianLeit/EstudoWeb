@@ -22,8 +22,21 @@
         }
         .menu{
             display: inline-block;
-            text-align: justify;
             width: auto;
+            height: auto;
+        }
+        li > a{
+            display: inline-block;
+            width: auto;
+            height: 30px;
+            padding: 0;
+            background-color: #1f1f20;
+            color: #FFF;
+            border-radius: 1px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial;
         }
         .menu-toggle{
             padding: 12.5px;
@@ -34,11 +47,7 @@
             display: inline-block;
             border-color: blue;
             border-bottom: 11px;
-            bottom: autos;
-        }
-        a{
-            display: inline;
-            position: static;        
+            bottom: auto;
         }
         .autenticacao{
             float: right;
@@ -63,15 +72,23 @@
             background-color: #b92121;
             color: #FFF;
         }
+        a.botao-destaque:hover{
+            background-color: #261997;
+            color: #FFF;
+        }
         img {
             max-width: 180px;
             height: auto;
             object-fit: fill;
         }
+        .logo {
+            height: auto;
+            width: auto;
+        }
         ul{
             margin: auto;
-            padding: 5.5%;
-            width: 200px;
+            padding: 1% 0%;
+            width: 499px;
             float: inline-start;
             margin-inline: 10%;
         }
