@@ -14,24 +14,32 @@
         body{
             margin: 0%;
         }
-        div{
-            display: inline-block;
-        }
-        .menu{
+        .menu, div{
             display: inline-block;
             width: auto;
             height: auto;
         }
-        li > a{
+        a{
             display: inline-block;
             width: auto;
             color: #FFF;
             text-align: center;
             font-weight: bold;
             font-family: Arial;
+            text-decoration: none;
+        }
+        li > a{
+            height: auto;
+            padding: 7px 7px;
+            background-color: #1f1f20;
+            border-radius: 1px;
+            font-size: 100%;
+        }
+        li > a:hover{
+            background-color: rgb(54, 54, 54);
         }
         .menu-toggle{
-            padding: 12.5px;
+            padding: 0.7%;
             float: inline-end;
             border: 0%;
         }
@@ -51,7 +59,7 @@
         .autenticacao > a{
             display: inline-block;
             width: auto;
-            padding: 5%;
+            padding: 3%;
             background-color: #000;
             border-radius: 5px;
         }
@@ -61,10 +69,16 @@
         a.botao-destaque:hover{
             background-color: #261997;
         }
+        a.login:hover{
+            background-color: rgba(128, 255, 0, 0.555);
+        }
         img {
             max-width: 180px;
             height: auto;
             object-fit: fill;
+        }
+        img:hover{
+            background-color: #0000003b;
         }
         .logo {
             height: auto;
@@ -72,8 +86,7 @@
         }
         ul{
             margin: auto;
-            padding: 1% 0%;
-            width: 499px;
+            width: 440px;
             float: inline-start;
         }
     </style>
@@ -106,7 +119,7 @@
             </ul>
         </nav>
         <aside class="autenticacao">
-            <a href="#login">Login</a>
+            <a href="#login" class="login">Login</a>
             <a href="#registar" class="botao-destaque">Registrar</a>
         </aside>
     </header>
