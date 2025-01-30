@@ -10,13 +10,10 @@
         body{
             margin: 0%;
         }
-        .menu, div{
+        .menu, div, a{
             display: inline-block;
-            width: auto;
-            height: auto;
         }
         a{
-            display: inline-block;
             width: auto;
             color: #FFF;
             text-align: center;
@@ -32,13 +29,14 @@
             font-size: 100%;
         }
         .cabecalho, li > a:hover{
-            background-color: rgb(54, 54, 54);
+            background-color: #363636;
         }
         .menu-toggle{
-            padding: 0.7%;
+            margin: 0.4%;
+            padding: 7px;
             float: inline-end;
             border: 0%;
-            background-color: rgb(88, 80, 80);
+            background-color: rgba(255, 255, 255, 0.082);
         }
         
         nav li {
@@ -48,16 +46,13 @@
             bottom: auto;
         }
         .autenticacao{
-            float: right;
-            padding: 0.2% 10%;
-            padding-left: 2%;
-            padding-right: 1%;
-            width: 200px;
+            float: inline-end;
+            padding: 3px;
         }
         .autenticacao > a{
-            display: inline-block;
-            width: auto;
-            padding: 3%;
+            width: 80px;
+            padding-top: 5px;
+            padding-bottom: 5px;
             background-color: #000;
             border-radius: 5px;
         }
@@ -66,6 +61,9 @@
         }
         a.botao-destaque:hover{
             background-color: #261997;
+        }
+        a.login{
+            background-color: goldenrod;
         }
         a.login:hover{
             background-color: rgba(128, 255, 0, 0.555);
@@ -76,13 +74,29 @@
             object-fit: fill;
         }
         img:hover, .menu-toggle:hover{
-            background-color: #0000003b;
+            background-color: #ffffff0e;
         }
         ul{
             margin: auto;
-            width: 440px;
+            width: auto;
             float: inline-start;
         }
+        @media (min-width:530px){
+            button{
+                display:none;
+            }
+        }
+        @media (max-width:530px) {
+            .menu{
+                display: none;
+            }
+        }
+        @media (max-width:700px) {
+            .autenticacao{
+                display: none;
+            }
+        }
+        
     </style>
 </head>
 
@@ -99,16 +113,16 @@
         <nav class="menu">
             <ul>
                 <li>
-                    <a href="#inicio">Início</a>
+                    <a id="inicio" href="#inicio" >Início</a>
                 </li>
                 <li>
-                    <a href="#cursos">Cursos</a>
+                    <a id="cursos" href="#cursos">Cursos</a>
                 </li>
                 <li>
-                    <a href="#sobre">Sobre</a>
+                    <a id="sobre" href="#sobre">Sobre</a>
                 </li>
                 <li>
-                    <a href="#contato">Contato</a>
+                    <a id="contato" href="#contato">Contato</a>
                 </li>
             </ul>
         </nav>
@@ -119,7 +133,27 @@
     </header>
 
     <script>
-        // ...
+        let locationHash = window.location.hash
+        window.onhashchange = function () {
+            switch (window.location.hash) {
+                case "#inicio":
+                    document.getElementById("inicio").style.backgroundColor = "red";
+                    break;
+                case "#cursos":
+                    document.getElementById("cursos").style.backgroundColor = "green";
+                    break;
+                case "#sobre":
+                    document.getElementById("sobre").style.backgroundColor = "blue";
+                    break;
+                case "#contato":
+                    document.getElementById("contato").style.backgroundColor = "goldenrod";
+                    break;
+                default:
+                    alert(window.location.hash)
+                    break;
+            }
+        }
+         
     </script>
 </body>
 
